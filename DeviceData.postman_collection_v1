@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "8fbb0ab6-e2d7-41bb-93ea-bb6dfda0656a",
+		"name": "DeviceData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImVtYWlsIjoiTW96ZWxsLkphY29iaUB5YWhvby5jb20iLCJpYXQiOjE2MTYxMTIyNzQsImV4cCI6MTYxNjE5ODY3NH0.BxA7iBZ7oxUentV5IWeAlz2g3PqZbAu5ik-K23zQ-Jc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://163.47.115.230:30000/api/users?limit=10&page=1&sortByDesc=id",
+					"protocol": "http",
+					"host": [
+						"163",
+						"47",
+						"115",
+						"230"
+					],
+					"port": "30000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "sortByDesc",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeviceType",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImVtYWlsIjoiTW96ZWxsLkphY29iaUB5YWhvby5jb20iLCJpYXQiOjE2MTYxMTIyNzQsImV4cCI6MTYxNjE5ODY3NH0.BxA7iBZ7oxUentV5IWeAlz2g3PqZbAu5ik-K23zQ-Jc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BrandId\": \"TestModel1\",\r\n    \"Name\": \"Test Model1\",\r\n    \"TypeId\": 1,\r\n    \"Comment\": \"test1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://163.47.115.230:30000/api/devicetype?limit=40&page=1",
+					"protocol": "http",
+					"host": [
+						"163",
+						"47",
+						"115",
+						"230"
+					],
+					"port": "30000",
+					"path": [
+						"api",
+						"devicetype"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "40"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeviceModel - Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImVtYWlsIjoiTW96ZWxsLkphY29iaUB5YWhvby5jb20iLCJpYXQiOjE2MTYxMTIyNzQsImV4cCI6MTYxNjE5ODY3NH0.BxA7iBZ7oxUentV5IWeAlz2g3PqZbAu5ik-K23zQ-Jc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BrandId\": \"TestModel12\",\r\n    \"Name\": \"Test Model12\",\r\n    \"TypeId\": 1,\r\n    \"Comment\": \"test12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://163.47.115.230:30000/api/devicemodel",
+					"protocol": "http",
+					"host": [
+						"163",
+						"47",
+						"115",
+						"230"
+					],
+					"port": "30000",
+					"path": [
+						"api",
+						"devicemodel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Overview - modeltype",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImVtYWlsIjoiTW96ZWxsLkphY29iaUB5YWhvby5jb20iLCJpYXQiOjE2MTYxMTIyNzQsImV4cCI6MTYxNjE5ODY3NH0.BxA7iBZ7oxUentV5IWeAlz2g3PqZbAu5ik-K23zQ-Jc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"id\": 6,\r\n        \"email\": \"Mozell.Jacobi@yahoo.com\"\r\n    },\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImVtYWlsIjoiTW96ZWxsLkphY29iaUB5YWhvby5jb20iLCJpYXQiOjE2MTU5NDA3OTEsImV4cCI6MTYxNjAyNzE5MX0.Q7qbXHGDVfDkoISzeEUglpNNvHeuRh89a3rQY40kGKc\",\r\n    \"expires_in\": \"24h\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://163.47.115.230:30000/api/overview/modeltype",
+					"protocol": "http",
+					"host": [
+						"163",
+						"47",
+						"115",
+						"230"
+					],
+					"port": "30000",
+					"path": [
+						"api",
+						"overview",
+						"modeltype"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Overview - modeldata",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImVtYWlsIjoiTW96ZWxsLkphY29iaUB5YWhvby5jb20iLCJpYXQiOjE2MTYxMTIyNzQsImV4cCI6MTYxNjE5ODY3NH0.BxA7iBZ7oxUentV5IWeAlz2g3PqZbAu5ik-K23zQ-Jc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"id\": 6,\r\n        \"email\": \"Mozell.Jacobi@yahoo.com\"\r\n    },\r\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsImVtYWlsIjoiTW96ZWxsLkphY29iaUB5YWhvby5jb20iLCJpYXQiOjE2MTU5NDA3OTEsImV4cCI6MTYxNjAyNzE5MX0.Q7qbXHGDVfDkoISzeEUglpNNvHeuRh89a3rQY40kGKc\",\r\n    \"expires_in\": \"24h\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://163.47.115.230:30000/api/overview/modeldata/Hamilton/Galileo",
+					"protocol": "http",
+					"host": [
+						"163",
+						"47",
+						"115",
+						"230"
+					],
+					"port": "30000",
+					"path": [
+						"api",
+						"overview",
+						"modeldata",
+						"Hamilton",
+						"Galileo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"Mozell.Jacobi@yahoo.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://163.47.115.230:30000/api/login",
+					"protocol": "http",
+					"host": [
+						"163",
+						"47",
+						"115",
+						"230"
+					],
+					"port": "30000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"Mozell.Jacobi@yahoo.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://163.47.115.230:30000/api/login",
+					"protocol": "http",
+					"host": [
+						"163",
+						"47",
+						"115",
+						"230"
+					],
+					"port": "30000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
