@@ -30,10 +30,24 @@ const register = (app) => {
             res.json({ error: err.message || err });
         }
     });
-    app.get(`/api/modeldata/:id`, (req, res) => {
+    app.get(`/api/modeldata/:brand`, (req, res) => {
         try {
             for (const val of arr) {
-                if (val.BrandId === req.params.id) {
+                if (val.BrandId === req.params.brand) {
+                    return res.json(val);
+                }
+            }
+        }
+        catch (err) {
+            // tslint:disable-next-line:no-console
+            console.error(err);
+            res.json({ error: err.message || err });
+        }
+    });
+    app.get(`/api/modeldata/:brand/:name`, (req, res) => {
+        try {
+            for (const val of arr) {
+                if (val.BrandId === req.params.brand && val.Name === req.params.name) {
                     return res.json(val);
                 }
             }
@@ -90,46 +104,6 @@ const register = (app) => {
             res.json({ error: err.message || err });
         }
     });
-    // app.get( `/api/guitars/total`, oidc.ensureAuthenticated(), async ( req: any, res ) => {
-    //     try {
-    //         const userId = req.userContext.userinfo.sub;
-    //         const total = await db.one( `
-    //         SELECT  count(*) AS total
-    //         FROM    guitars
-    //         WHERE   user_id = $[userId]`, { userId }, ( data: { total: number } ) => {
-    //             return {
-    //                 total: +data.total
-    //             };
-    //         } );
-    //         return res.json( total );
-    //     } catch ( err ) {
-    //         // tslint:disable-next-line:no-console
-    //         console.error(err);
-    //         res.json( { error: err.message || err } );
-    //     }
-    // } );
-    // app.post( `/api/guitars/update`, oidc.ensureAuthenticated(), async ( req: any, res ) => {
-    //     try {
-    //         const userId = req.userContext.userinfo.sub;
-    //         const id = await db.one( `
-    //             UPDATE guitars
-    //             SET brand = $[brand]
-    //                 , model = $[model]
-    //                 , year = $[year]
-    //                 , color = $[color]
-    //             WHERE
-    //                 id = $[id]
-    //                 AND user_id = $[userId]
-    //             RETURNING
-    //                 id;`,
-    //             { userId, ...req.body  } );
-    //         return res.json( { id } );
-    //     } catch ( err ) {
-    //         // tslint:disable-next-line:no-console
-    //         console.error(err);
-    //         res.json( { error: err.message || err } );
-    //     }
-    // } );
 };
 exports.register = register;
 //# sourceMappingURL=api.js.map
