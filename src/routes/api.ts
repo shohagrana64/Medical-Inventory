@@ -37,10 +37,23 @@ export const register = ( app: express.Application ) => {
         }
     } );
 
-    app.get( `/api/modeldata/:id`, ( req: any, res ) => {
+    app.get( `/api/modeldata/:brand`, ( req: any, res ) => {
         try {
             for (const val of arr) {
-                if(val.BrandId===req.params.id){
+                if(val.BrandId===req.params.brand){
+                    return res.json(val);
+                }
+            }
+        } catch ( err ) {
+            // tslint:disable-next-line:no-console
+            console.error(err);
+            res.json( { error: err.message || err } );
+        }
+    } );
+    app.get( `/api/modeldata/:brand/:name`, ( req: any, res ) => {
+        try {
+            for (const val of arr) {
+                if(val.BrandId===req.params.brand && val.Name===req.params.name ){
                     return res.json(val);
                 }
             }
