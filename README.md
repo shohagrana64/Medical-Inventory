@@ -21,6 +21,8 @@ ModelType shows the list of medical devices at /modeltype
 ![1.png](ss/1.png)
 
 Clicking on description brings the description of the name, all information like BrandId, Name, TypeID, Comment
+> taken from api call to /modeldata. Other api calls to /modeldata/{BrandID}/{Name} also work, checked in postman.
+
 ![2.png](ss/2.png)
 
 Clicking on delete deletes the particular entry
@@ -35,5 +37,5 @@ Adding a device to the medical device list is shown here.
 Successful addition of the device.
 ![6.png](ss/6.png)
 
-> Note: I could not implement login since I only had 2 days free time. Most of the backend api components implemented successfully.
+> Note: I could not implement login since I only had 2 days free time. Backend call to login works,  Most of the backend api components implemented successfully.
 
