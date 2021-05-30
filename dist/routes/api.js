@@ -104,6 +104,24 @@ const register = (app) => {
             res.json({ error: err.message || err });
         }
     });
+    app.post(`/login`, (req, res) => {
+        try {
+            const e = req.body.email;
+            const p = req.body.password;
+            if (e === "Mozell.Jacobi@yahoo.com" && p === "password") {
+                return res.redirect("/modeltype");
+            }
+            else if (e !== "Mozell.Jacobi@yahoo.com") {
+                return res.json("Wrong email");
+            }
+            return res.json("Wrong Password");
+        }
+        catch (err) {
+            // tslint:disable-next-line:no-console
+            console.error(err);
+            res.json({ error: err.message || err });
+        }
+    });
 };
 exports.register = register;
 //# sourceMappingURL=api.js.map
